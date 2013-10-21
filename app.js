@@ -21,6 +21,10 @@ app.get('/', function(req, res) {
     res.send('please select a collection, e.g., /collections/messages')
 });
 
+app.get('/monkey', function (req, res) {
+    res.send({name:'HOHOHO'});
+});
+
 
 app.get('/collections/:collectionName', function(req, res) {
     req.collection.find({},{limit:10, sort: [['_id',-1]]}).toArray(function(e, results){
@@ -28,11 +32,6 @@ app.get('/collections/:collectionName', function(req, res) {
         res.send(results)
     })
 })
-
-app.get('/monkey', function (req, res) {
-    res.send({name:'HOHOHO'});
-});
-
 
 app.post('/collections/:collectionName', function(req, res) {
     req.collection.insert(req.body, {}, function(e, results){
