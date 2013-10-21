@@ -4,6 +4,7 @@
   "version": "0.3.0",
   "author": "Are Almaas <arealmaas@gmail.com>",
   "description": "An API to server the volleyball application",
+  "subdomain": "volleyball",
   "scripts": {
     "start": "node app.js"
   },
