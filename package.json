@@ -5,15 +5,20 @@
   "author": "Are Almaas <arealmaas@gmail.com>",
   "description": "An API to server the volleyball application",
   "scripts": {
-
+    "start": "app.js"
   },
-  "contributors": [ 
+  "contributors": [
     {
       "name": "Are Almaas",
       "email": "arealmaas@gmail.com"
     }
   ],
-  "dependencies":{
-    "actionHero": "x"
+  "dependencies": {
+    "express": "~3.4.2",
+    "superagent": "~0.15.7",
+    "mongoskin": "~0.6.0",
+    "mongodb": "~1.3.19",
+    "mocha": "~1.13.0",
+    "expect.js": "~0.2.0"
   }
 }
