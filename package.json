@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node app.js"
   },
+  "engines" : { "node" : ">=0.8.1 <0.12" },
   "contributors": [
     {
       "name": "Are Almaas",
