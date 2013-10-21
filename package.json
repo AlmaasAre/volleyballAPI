@@ -1,0 +1,19 @@
+{
+  "name": "volleyballAPI",
+  "preferGlobal": false,
+  "version": "0.3.0",
+  "author": "Are Almaas <arealmaas@gmail.com>",
+  "description": "An API to server the volleyball application",
+  "scripts": {
+
+  },
+  "contributors": [ 
+    {
+      "name": "Are Almaas",
+      "email": "arealmaas@gmail.com"
+    }
+  ],
+  "dependencies":{
+    "actionHero": "x"
+  }
+}
