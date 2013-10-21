@@ -8,9 +8,13 @@ var app = express();
 
 app.use(express.bodyParser());
 
+app.all('/*', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+});
+
 var db = mongoskin.db('mongodb://volleyballen:volleyball123@ds051658.mongolab.com:51658/volleyball_api', {safe:true});
-
-
 
 app.param('collectionName', function(req, res, next, collectionName){
     req.collection = db.collection(collectionName)
