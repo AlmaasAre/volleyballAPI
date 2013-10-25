@@ -25,13 +25,8 @@ app.get('/', function(req, res) {
     res.send('please select a collection, e.g., /collections/messages')
 });
 
-app.get('/monkey', function (req, res) {
-    res.send({name:'HOHOHO'});
-});
-
-
 app.get('/collections/:collectionName', function(req, res) {
-    req.collection.find({},{limit:10, sort: [['_id',-1]]}).toArray(function(e, results){
+    req.collection.find({},{sort: [['_id',-1]]}).toArray(function(e, results){
         if (e) return next(e)
         res.send(results)
     })
